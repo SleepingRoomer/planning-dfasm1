@@ -2,6 +2,12 @@ name: Sonder la structure des sheets (temporaire)
 
 on:
   workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - "scripts/probe-sheets.mjs"
+      - ".github/workflows/probe.yml"
 
 jobs:
   probe:
