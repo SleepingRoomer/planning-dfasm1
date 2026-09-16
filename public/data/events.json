@@ -1,7 +1,7 @@
 {
   "promo": "DFASM1",
   "annee": "2026-2027",
-  "genere": "2026-09-16T12:40:36.830Z",
+  "genere": "2026-09-16T17:39:37.067Z",
   "nb": 231,
   "events": [
     {
@@ -21,13 +21,13 @@
       "date": "2026-09-16",
       "debut": "17:15",
       "fin": "19:45",
-      "matiere": "Radiologie1",
-      "libelle": "Radiologie1",
+      "matiere": "Radiologie1 (neuro Rx)",
+      "libelle": "Radiologie1 (neuro Rx)",
       "type": "conf",
       "site": "PSL105",
       "salle": "AMPHI F",
       "promo": "DFASM1",
-      "id": "2026-09-16-radiologie1-17-15",
+      "id": "2026-09-16-radiologie1-neuro-rx-17-15",
       "source": "cycle1"
     },
     {
