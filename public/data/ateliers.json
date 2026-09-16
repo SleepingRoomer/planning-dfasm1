@@ -1,0 +1,171 @@
+{
+  "genere": "2026-09-16T06:40:02.430Z",
+  "gouv": {
+    "ATLAN": {
+      "date": "lundi 19 octobre 2026",
+      "groupe": "GROUPE 1",
+      "accouchement": "14h à 15h",
+      "echo": "15h à 16h",
+      "rds": "16h à 17h"
+    },
+    "UZAN": {
+      "date": "lundi 19 octobre 2026",
+      "groupe": "GROUPE 1",
+      "accouchement": "14h à 15h",
+      "echo": "15h à 16h",
+      "rds": "16h à 17h"
+    },
+    "BEDDOCK": {
+      "date": "lundi 19 octobre 2026",
+      "groupe": "GROUPE 1",
+      "accouchement": "14h à 15h",
+      "echo": "15h à 16h",
+      "rds": "16h à 17h"
+    },
+    "NIZARD": {
+      "date": "lundi 19 octobre 2026",
+      "groupe": "GROUPE 1",
+      "accouchement": "14h à 15h",
+      "echo": "15h à 16h",
+      "rds": "16h à 17h"
+    },
+    "TOUBOUL": {
+      "date": "lundi 19 octobre 2026",
+      "groupe": "GROUPE 1",
+      "accouchement": "14h à 15h",
+      "echo": "15h à 16h",
+      "rds": "16h à 17h"
+    },
+    "KAYEM": {
+      "date": "lundi 19 octobre 2026",
+      "groupe": "GROUPE 1",
+      "accouchement": "14h à 15h",
+      "echo": "15h à 16h",
+      "rds": "16h à 17h"
+    },
+    "TRAXER": {
+      "date": "lundi 19 octobre 2026",
+      "groupe": "GROUPE 1",
+      "accouchement": "14h à 15h",
+      "echo": "15h à 16h",
+      "rds": "16h à 17h"
+    },
+    "PARC": {
+      "date": "lundi 19 octobre 2026",
+      "groupe": "GROUPE 1",
+      "accouchement": "14h à 15h",
+      "echo": "15h à 16h",
+      "rds": "16h à 17h"
+    },
+    "GAUJOUX": {
+      "date": "lundi 19 octobre 2026",
+      "groupe": "GROUPE 1",
+      "accouchement": "14h à 15h",
+      "echo": "15h à 16h",
+      "rds": "16h à 17h"
+    },
+    "CHARTIER-KASTLER": {
+      "date": "lundi 19 octobre 2026",
+      "groupe": "GROUPE 2",
+      "accouchement": "16h à 17h",
+      "echo": "14h à 15h",
+      "rds": "15h à 16h"
+    },
+    "SCATTON": {
+      "date": "lundi 19 octobre 2026",
+      "groupe": "GROUPE 2",
+      "accouchement": "16h à 17h",
+      "echo": "14h à 15h",
+      "rds": "15h à 16h"
+    },
+    "BALLESTER": {
+      "date": "lundi 19 octobre 2026",
+      "groupe": "GROUPE 2",
+      "accouchement": "16h à 17h",
+      "echo": "14h à 15h",
+      "rds": "15h à 16h"
+    }
+  },
+  "urgrea": {
+    "GOULET": {
+      "date": "lundi 28 septembre 2026",
+      "acr2": "lundi 28 septembre 2026",
+      "heure": "12-13h"
+    },
+    "DELEMAZURE": {
+      "date": "lundi 28 septembre 2026",
+      "acr2": "lundi 28 septembre 2026",
+      "heure": "12-13h"
+    },
+    "FARTOUKH": {
+      "date": "lundi 28 septembre 2026",
+      "acr2": "lundi 28 septembre 2026",
+      "heure": "12-13h"
+    },
+    "MONSEL": {
+      "date": "lundi 28 septembre 2026",
+      "acr2": "lundi 28 septembre 2026",
+      "heure": "12-13h"
+    },
+    "COMBES": {
+      "date": "lundi 28 septembre 2026",
+      "acr2": "lundi 28 septembre 2026",
+      "heure": "12-13h"
+    },
+    "RAUX": {
+      "date": "lundi 28 septembre 2026",
+      "acr2": "lundi 28 septembre 2026",
+      "heure": "12-13h"
+    },
+    "CONSTANTIN": {
+      "date": "lundi 28 septembre 2026",
+      "acr2": "lundi 28 septembre 2026",
+      "heure": "12-13h"
+    },
+    "RAYNAL": {
+      "date": "lundi 28 septembre 2026",
+      "acr2": "lundi 28 septembre 2026",
+      "heure": "12-13h"
+    },
+    "FREUND": {
+      "date": "lundi 28 septembre 2026",
+      "acr2": "lundi 28 septembre 2026",
+      "heure": "13h-14h"
+    },
+    "DEMOULE": {
+      "date": "lundi 28 septembre 2026",
+      "acr2": "lundi 28 septembre 2026",
+      "heure": "13h-14h"
+    },
+    "CASSARD": {
+      "date": "lundi 28 septembre 2026",
+      "acr2": "lundi 28 septembre 2026",
+      "heure": "13h-14h"
+    },
+    "MAURY": {
+      "date": "lundi 28 septembre 2026",
+      "acr2": "lundi 28 septembre 2026",
+      "heure": "13h-14h"
+    },
+    "BOUGLE": {
+      "date": "lundi 28 septembre 2026",
+      "acr2": "lundi 28 septembre 2026",
+      "heure": "13h-14h"
+    },
+    "VERDONK": {
+      "date": "lundi 28 septembre 2026",
+      "acr2": "lundi 28 septembre 2026",
+      "heure": "13h-14h"
+    },
+    "DEGOS": {
+      "date": "lundi 28 septembre 2026",
+      "acr2": "lundi 28 septembre 2026",
+      "heure": "13h-14h"
+    },
+    "DEMERET": {
+      "date": "mercredi 30 septembre 2026",
+      "acr2": "mercredi 30 septembre 2026",
+      "heure": "13h-14h"
+    }
+  }
+}
