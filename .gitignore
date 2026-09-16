@@ -1,0 +1,21 @@
+# Aucune donnée nominative (affectations d'ateliers, listes d'étudiants, exports bruts de la
+# faculté) ne doit entrer dans le dépôt, même par accident.
+*.xlsx
+*.xls
+
+# Node / build
+node_modules
+dist
+dist-ssr
+*.local
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Éditeurs
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
