@@ -1,20 +1,10 @@
-/* Script de reconnaissance temporaire : n'entre pas dans l'architecture finale.
-   Sert uniquement à découvrir, depuis les runners GitHub Actions (le réseau du
-   sandbox de développement n'a pas accès à docs.google.com), la structure
-   réelle des onglets utiles avant d'écrire scripts/ingest.mjs.
+/* Script de reconnaissance temporaire (round 3) : structure de l'onglet
+   "cycle 1" et de l'onglet "suture". N'imprime aucune ligne contenant un nom
+   d'intervenant ou d'étudiant : uniquement les en-têtes et les colonnes de
+   planification (date, horaires, site) déjà validées comme sûres. */
 
-   Important : ce script n'imprime JAMAIS de ligne brute des feuilles B et C,
-   qui contiennent des étudiants nommés (colonnes NOM/Prénom). Il n'en publie
-   que des agrégats anonymisés (valeurs uniques de la colonne « service »). */
+const A = "1J1_RPiK6E5rpTGMNqsGtC5eWFvJkAhXdxyUHYTqeOZE";
 
-const SHEETS = {
-  A_planning: "1J1_RPiK6E5rpTGMNqsGtC5eWFvJkAhXdxyUHYTqeOZE",
-  B_atelier_gouv: "1AIQePbwBukAJo85098uk76SJr-UZ8M4gvEryyLO6Sfs",
-  C_atelier_urgrea: "1oVdKc3CuJIoMw35U9vojlH8XhjnVKkC9dD4EnVt5tkk",
-};
-
-const csvUrl = (id, gid) =>
-  `https://docs.google.com/spreadsheets/d/${id}/export?format=csv&gid=${gid}`;
 const gvizUrl = (id, sheet) =>
   `https://docs.google.com/spreadsheets/d/${id}/gviz/tq?tqx=out:csv&sheet=${encodeURIComponent(sheet)}`;
 
@@ -36,80 +26,42 @@ function parseCSV(texte) {
   return lignes;
 }
 
-async function fetchCSV(url) {
+async function fetchLignes(url) {
   const rep = await fetch(url, { redirect: "follow" });
   const texte = await rep.text();
-  return { ok: rep.ok, status: rep.status, ct: rep.headers.get("content-type"), texte };
+  return parseCSV(texte).filter((l) => l.some((c) => c.trim()));
 }
 
-async function probeDeroule() {
-  console.log("\n=== A_planning / gid=0 (déroulé) : analyse complète et anonymisée ===");
-  const { ok, status, texte } = await fetchCSV(csvUrl(SHEETS.A_planning, "0"));
-  console.log(`HTTP ${status}`);
-  if (!ok) return;
-  const lignes = parseCSV(texte).filter((l) => l.some((c) => c.trim()));
-  const [entetes, ...corps] = lignes;
-  console.log(`En-têtes : ${JSON.stringify(entetes)}`);
-  console.log(`Lignes de données : ${corps.length}`);
-  const col = (nom) => entetes.findIndex((e) => e.trim().toLowerCase() === nom);
-  const iPole = col("pole"), iType = col("type"), iDate = col("date");
-  const poles = new Set(corps.map((r) => r[iPole]?.trim()).filter(Boolean));
-  const types = new Set(corps.map((r) => r[iType]?.trim()).filter(Boolean));
-  console.log(`Pôles rencontrés : ${[...poles].sort().join(", ")}`);
-  console.log(`Types rencontrés : ${[...types].sort().join(", ")}`);
-  const dates = corps.map((r) => r[iDate]?.trim()).filter(Boolean);
-  console.log(`Première date (brute) : ${dates[0]} — Dernière : ${dates[dates.length - 1]}`);
+async function probeCycle1() {
+  console.log("\n=== onglet « cycle 1 » : en-têtes + colonnes sûres uniquement ===");
+  const lignes = await fetchLignes(gvizUrl(A, "cycle 1"));
+  console.log(`Lignes non vides : ${lignes.length}`);
+  const entetes = lignes[0];
+  console.log(`En-têtes complets : ${JSON.stringify(entetes)}`);
+  const col = (nom) => entetes.findIndex((e) => e.trim().toLowerCase().includes(nom));
+  const surs = ["date", "horaire", "site", "amphi"].map((n) => ({ n, i: col(n) }));
+  console.log(`Index des colonnes sûres : ${JSON.stringify(surs)}`);
+  for (const r of lignes.slice(1, 6)) {
+    console.log("  " + surs.map(({ n, i }) => `${n}=${i >= 0 ? r[i] : "?"}`).join(" | "));
+  }
+  // Colonne 0 (sans en-tête visible) : à quoi sert-elle (matière ? type ?) ?
+  console.log(`Colonne 0 sur les 5 premières lignes : ${lignes.slice(1, 6).map((r) => JSON.stringify(r[0])).join(", ")}`);
 }
 
-async function probeNomsOnglets(id, label) {
-  console.log(`\n=== ${label} : recherche d'onglets par nom (gviz) ===`);
-  const candidats = [
-    "cycle 1", "Cycle 1", "CYCLE 1", "cycle1",
-    "groupes atelier suture", "groupe atelier suture", "atelier suture", "suture",
-    "emploi du temps", "Emploi du temps",
-  ];
-  for (const nom of candidats) {
-    const { ok, status, texte } = await fetchCSV(gvizUrl(id, nom));
-    const premiereLigne = texte.split("\n")[0]?.slice(0, 200);
-    const sembleErreur = texte.includes("Invalid query") || texte.includes("<HTML>") || !ok;
-    console.log(`« ${nom} » -> HTTP ${status}${sembleErreur ? " (probablement absent)" : " -> " + premiereLigne}`);
+async function probeSuture() {
+  console.log("\n=== onglet « suture » : structure ===");
+  const lignes = await fetchLignes(gvizUrl(A, "suture"));
+  console.log(`Lignes non vides : ${lignes.length}`);
+  for (let i = 0; i < Math.min(lignes.length, 8); i++) {
+    console.log(`  ligne ${i} (longueur ${lignes[i].length}) : ${JSON.stringify(lignes[i].slice(0, 3))}...`);
   }
-}
-
-async function probeAtelierAnonymise(id, label, colService, colonnesSures) {
-  console.log(`\n=== ${label} : correspondance service -> session (anonymisé) ===`);
-  const { ok, status, texte } = await fetchCSV(csvUrl(id, "0"));
-  console.log(`HTTP ${status}`);
-  if (!ok) return;
-  const lignes = parseCSV(texte).filter((l) => l.some((c) => c.trim()));
-  const [entetes, ...corps] = lignes;
-  console.log(`En-têtes (structure uniquement, pas de contenu) : ${JSON.stringify(entetes)}`);
-  console.log(`Lignes de données : ${corps.length}`);
-  const col = (nom) => entetes.findIndex((e) => e.trim().toLowerCase() === nom.toLowerCase());
-  const iSvc = col(colService);
-  if (iSvc < 0) { console.log(`Colonne « ${colService} » introuvable.`); return; }
-  // Liste blanche stricte des colonnes affichées : jamais NOM/Prénom, même en interne à ce log.
-  const indicesSurs = colonnesSures.map((nom) => col(nom)).filter((i) => i >= 0);
-  const parService = new Map();
-  for (const r of corps) {
-    const svc = r[iSvc]?.trim();
-    if (!svc) continue;
-    const reste = indicesSurs.map((i) => `${entetes[i].trim()}=${r[i]?.trim()}`).join(" | ");
-    if (!parService.has(svc)) parService.set(svc, reste);
-  }
-  console.log(`Services distincts : ${parService.size}`);
-  for (const [svc, info] of [...parService.entries()].sort()) {
-    console.log(`  ${svc} :: ${info}`);
-  }
+  const enTeteProbable = lignes.find((l) => l.some((c) => /nom|prénom|groupe|date/i.test(c)));
+  console.log(`Ligne d'en-tête probable : ${JSON.stringify(enTeteProbable)}`);
 }
 
 async function main() {
-  await probeDeroule();
-  await probeNomsOnglets(SHEETS.A_planning, "A_planning");
-  await probeAtelierAnonymise(SHEETS.B_atelier_gouv, "B_atelier_gouv", "Stage 1",
-    ["DATE", "GROUPE", "ACCOUCHEMENT", "ECHO", "RDS"]);
-  await probeAtelierAnonymise(SHEETS.C_atelier_urgrea, "C_atelier_urgrea", "service",
-    ["URGENCES VITALES 1 - 9h-12h", "ACR2 12h-14h", "heure"]);
+  await probeCycle1();
+  await probeSuture();
 }
 
 main();
