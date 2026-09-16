@@ -1,5 +1,6 @@
 name: Déployer sur GitHub Pages
 
+# Nécessite Settings -> Pages -> Source : GitHub Actions (activé le 16/09/2026).
 on:
   push:
     branches:
