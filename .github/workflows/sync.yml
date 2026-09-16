@@ -1,0 +1,40 @@
+name: Synchroniser le planning
+
+on:
+  schedule:
+    - cron: "23 * * * *" # toutes les heures, à H+23
+  workflow_dispatch: # bouton manuel dans l'onglet Actions
+  push:
+    branches:
+      - main
+    paths:
+      - "scripts/**"
+      - "config/**"
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Télécharger et normaliser
+        run: node scripts/ingest.mjs
+
+      - name: Commiter si le planning a changé
+        run: |
+          git config user.name  "sync-bot"
+          git config user.email "sync-bot@users.noreply.github.com"
+          git add public/data/ public/ics/
+          if git diff --staged --quiet; then
+            echo "Aucun changement."
+          else
+            git commit -m "Planning mis à jour ($(date -u +%Y-%m-%d\ %H:%M) UTC)"
+            git push
+          fi
