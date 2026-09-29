@@ -1,8 +1,8 @@
 {
   "promo": "DFASM1",
   "annee": "2026-2027",
-  "genere": "2026-09-29T05:54:58.181Z",
-  "nb": 231,
+  "genere": "2026-09-29T13:09:38.391Z",
+  "nb": 232,
   "events": [
     {
       "date": "2026-09-09",
@@ -395,7 +395,7 @@
       "debut": "14:00",
       "fin": "16:00",
       "matiere": "MED LEGALE TRAVAIL",
-      "libelle": "Violences sexuelles, violences faites aux femmes",
+      "libelle": "Décès, législation des prélèvements d'organes",
       "type": "cm",
       "site": "PSL91",
       "salle": "Amphi A",
@@ -489,8 +489,8 @@
       "debut": "14:00",
       "fin": "16:00",
       "matiere": "MED LEGALE TRAVAIL",
-      "libelle": "Décès, législation des prélèvements d'organes",
-      "type": "cm",
+      "libelle": "",
+      "type": "cours",
       "site": "Hopital Pitié",
       "salle": "amphi Stomato",
       "promo": "DFASM1",
@@ -857,6 +857,19 @@
       "promo": "DFASM1",
       "id": "2026-11-18-radiologie2-17-15",
       "source": "cycle1"
+    },
+    {
+      "date": "2026-11-20",
+      "debut": "14:00",
+      "fin": "16:00",
+      "matiere": "MED LEGALE TRAVAIL",
+      "libelle": "Violences sexuelles, violences faites aux femmes",
+      "type": "cm",
+      "site": "en attente",
+      "salle": "en attente",
+      "promo": "DFASM1",
+      "id": "2026-11-20-med-legale-travail-14-00",
+      "source": "deroule"
     },
     {
       "date": "2026-11-20",
@@ -1273,7 +1286,7 @@
       "matiere": "MED LEGALE TRAVAIL",
       "libelle": "Correction",
       "type": "cours",
-      "site": "zoom",
+      "site": "zoom ?",
       "promo": "DFASM1",
       "id": "2027-01-08-med-legale-travail-jj",
       "source": "deroule"
