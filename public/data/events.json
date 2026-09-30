@@ -1,8 +1,8 @@
 {
   "promo": "DFASM1",
   "annee": "2026-2027",
-  "genere": "2026-09-30T08:46:30.625Z",
-  "nb": 232,
+  "genere": "2026-09-30T15:59:50.947Z",
+  "nb": 231,
   "events": [
     {
       "date": "2026-09-09",
@@ -482,19 +482,6 @@
       "promo": "DFASM1",
       "pole": "URRO1",
       "id": "2026-10-14-rhumatologie-14-00",
-      "source": "deroule"
-    },
-    {
-      "date": "2026-10-16",
-      "debut": "14:00",
-      "fin": "16:00",
-      "matiere": "MED LEGALE TRAVAIL",
-      "libelle": "",
-      "type": "cours",
-      "site": "Hopital Pitié",
-      "salle": "amphi Stomato",
-      "promo": "DFASM1",
-      "id": "2026-10-16-med-legale-travail-14-00",
       "source": "deroule"
     },
     {
