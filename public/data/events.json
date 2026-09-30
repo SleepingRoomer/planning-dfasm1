@@ -1,7 +1,7 @@
 {
   "promo": "DFASM1",
   "annee": "2026-2027",
-  "genere": "2026-09-30T02:12:49.826Z",
+  "genere": "2026-09-30T08:46:30.625Z",
   "nb": 232,
   "events": [
     {
@@ -865,8 +865,8 @@
       "matiere": "MED LEGALE TRAVAIL",
       "libelle": "Violences sexuelles, violences faites aux femmes",
       "type": "cm",
-      "site": "en attente",
-      "salle": "en attente",
+      "site": "PSL 105",
+      "salle": "Amphi F",
       "promo": "DFASM1",
       "id": "2026-11-20-med-legale-travail-14-00",
       "source": "deroule"
