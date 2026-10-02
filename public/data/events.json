@@ -1,8 +1,8 @@
 {
   "promo": "DFASM1",
   "annee": "2026-2027",
-  "genere": "2026-10-01T20:24:04.258Z",
-  "nb": 231,
+  "genere": "2026-10-02T00:57:10.533Z",
+  "nb": 230,
   "events": [
     {
       "date": "2026-09-09",
@@ -483,19 +483,6 @@
       "pole": "URRO1",
       "id": "2026-10-14-rhumatologie-14-00",
       "source": "deroule"
-    },
-    {
-      "date": "2026-10-16",
-      "debut": "17:15",
-      "fin": "19:45",
-      "matiere": "à conserver",
-      "libelle": "à conserver",
-      "type": "conf",
-      "site": "Hopital PSL",
-      "salle": "Stomato",
-      "promo": "DFASM1",
-      "id": "2026-10-16-conserver-17-15",
-      "source": "cycle1"
     },
     {
       "date": "2026-10-21",
