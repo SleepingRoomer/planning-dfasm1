@@ -1,7 +1,7 @@
 {
   "promo": "DFASM1",
   "annee": "2026-2027",
-  "genere": "2026-10-06T07:41:40.210Z",
+  "genere": "2026-10-06T15:19:37.878Z",
   "nb": 230,
   "events": [
     {
@@ -303,8 +303,7 @@
       "matiere": "MALADIES INFECTIEUSES",
       "libelle": "Bactériémie - Endocardite - Infections osseuses (sujets dans moodle et UNESS)",
       "type": "ed",
-      "site": "Hopital Pitié",
-      "salle": "Amphi Charcot",
+      "salle": "ZOOM",
       "promo": "DFASM1",
       "id": "2026-10-06-maladies-infectieuses-14-00",
       "source": "deroule"
@@ -316,8 +315,7 @@
       "matiere": "MALADIES INFECTIEUSES",
       "libelle": "Infections digestives : hépatites, diarrhées, abdominales (sujets dans UNESS)",
       "type": "ed",
-      "site": "Hopital Pitié",
-      "salle": "Amphi Charcot",
+      "salle": "ZOOM",
       "promo": "DFASM1",
       "id": "2026-10-06-maladies-infectieuses-16-15",
       "source": "deroule"
