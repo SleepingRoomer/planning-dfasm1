@@ -1,7 +1,7 @@
 {
   "promo": "DFASM1",
   "annee": "2026-2027",
-  "genere": "2026-10-06T15:19:37.878Z",
+  "genere": "2026-10-06T20:26:32.175Z",
   "nb": 230,
   "events": [
     {
@@ -2331,20 +2331,6 @@
       "source": "cycle1"
     },
     {
-      "date": "2027-04-05",
-      "debut": "14:00",
-      "fin": "18:00",
-      "matiere": "UROLOGIE",
-      "libelle": "Fonctionnel : incontinence, statique pelvienne, DE, troubles de la fertilité",
-      "type": "cm",
-      "site": "PSL91",
-      "salle": "salle 616",
-      "promo": "DFASM1",
-      "pole": "GOUV2",
-      "id": "2027-04-05-urologie-14-00",
-      "source": "deroule"
-    },
-    {
       "date": "2027-04-07",
       "debut": "17:15",
       "fin": "19:45",
@@ -2421,6 +2407,20 @@
       "promo": "DFASM1",
       "id": "2027-04-09-mit3-17-15",
       "source": "cycle1"
+    },
+    {
+      "date": "2027-04-12",
+      "debut": "14:00",
+      "fin": "18:00",
+      "matiere": "UROLOGIE",
+      "libelle": "Fonctionnel : incontinence, statique pelvienne, DE, troubles de la fertilité",
+      "type": "cm",
+      "site": "PSL91",
+      "salle": "salle 616 ?",
+      "promo": "DFASM1",
+      "pole": "GOUV2",
+      "id": "2027-04-12-urologie-14-00",
+      "source": "deroule"
     },
     {
       "date": "2027-04-14",
