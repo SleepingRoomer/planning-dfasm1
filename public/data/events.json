@@ -1,7 +1,7 @@
 {
   "promo": "DFASM1",
   "annee": "2026-2027",
-  "genere": "2026-10-07T14:39:02.295Z",
+  "genere": "2026-10-07T20:41:05.204Z",
   "nb": 230,
   "events": [
     {
@@ -408,8 +408,8 @@
       "matiere": "Neurologie",
       "libelle": "Neurologie",
       "type": "conf",
-      "site": "PSL105",
-      "salle": "AMPHI F",
+      "site": "ZOOM",
+      "salle": "le lien sera ici",
       "promo": "DFASM1",
       "id": "2026-10-09-neurologie-17-15",
       "source": "cycle1"
