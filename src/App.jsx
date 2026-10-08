@@ -453,6 +453,13 @@ export default function Planning() {
   }, [E, serviceGouv, serviceUrgRea, ateliers]);
 
   const futurs = useMemo(() => mesEvents.filter((ev) => bornes(ev)[1] >= now), [mesEvents, now]);
+  // Les plus récents en premier : c'est un historique qu'on consulte en remontant dans le temps.
+  const passes = useMemo(
+    () => mesEvents
+      .filter((ev) => bornes(ev)[1] < now)
+      .sort((a, b) => (a.d === b.d ? (b.s || "").localeCompare(a.s || "") : b.d.localeCompare(a.d))),
+    [mesEvents, now]
+  );
 
   const groupes = useMemo(() => construireGroupes(mesEvents), [mesEvents]);
   const groupesActifs = useMemo(
@@ -465,17 +472,19 @@ export default function Planning() {
     { id: "semaine", nom: "7 prochains jours" },
     { id: "avenir", nom: "Tout à venir" },
     { id: "examens", nom: "Examens" },
+    { id: "passe", nom: "Événements passés" },
     ...groupesActifs.map((g) => ({ id: g.id, nom: g.nom })),
   ], [groupesActifs]);
 
   const vueOk = onglets.some((o) => o.id === vue) ? vue : "avenir";
 
   const affiches = useMemo(() => {
+    if (vueOk === "passe") return passes;
     if (vueOk === "examens") return futurs.filter((ev) => ["examen", "edn"].includes(ev.type));
     if (vueOk === "semaine") return futurs.filter((ev) => diff(ev.d, today) <= 7);
     const g = groupes.find((x) => x.id === vueOk);
     return g ? futurs.filter(g.test) : futurs;
-  }, [futurs, vueOk, today, groupes]);
+  }, [futurs, passes, vueOk, today, groupes]);
 
   const selection = useMemo(() => {
     const vus = new Set();
@@ -617,7 +626,7 @@ export default function Planning() {
 
         {affiches.length > 0 && (
           <div className="pl-bar">
-            <span><span className="pl-bar-n">{affiches.length}</span> {affiches.length > 1 ? "événements" : "événement"} à venir</span>
+            <span><span className="pl-bar-n">{affiches.length}</span> {affiches.length > 1 ? "événements" : "événement"} {vueOk === "passe" ? "passés" : "à venir"}</span>
             <button onClick={() => telecharger(
               affiches,
               `DFASM1 — ${onglets.find((o) => o.id === vueOk)?.nom}`,
