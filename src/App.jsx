@@ -294,6 +294,10 @@ select{font-family:inherit;font-size:14px;width:100%;padding:8px 10px;
   cursor:pointer;white-space:nowrap}
 .pl-bar button:hover{background:var(--nuit);border-color:var(--nuit)}
 
+.pl-case-passes{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--doux);
+  margin-top:11px;cursor:pointer}
+.pl-case-passes input{width:15px;height:15px;accent-color:var(--profond)}
+
 .pl-mois{display:flex;align-items:center;gap:12px;margin:30px 0 4px}
 .pl-mois span{font-family:'Archivo Narrow',sans-serif;font-size:13px;font-weight:700;
   color:var(--profond);letter-spacing:.04em;white-space:nowrap}
@@ -402,6 +406,7 @@ export default function Planning() {
   const [serviceGouv, setServiceGouv] = useState("");
   const [serviceUrgRea, setServiceUrgRea] = useState("");
   const [vue, setVue] = useState("avenir");
+  const [avecPasses, setAvecPasses] = useState(false);
   const [rappels, setRappels] = useState(RAPPELS_DEFAUT);
   const [choisis, setChoisis] = useState(null);
   const [now, setNow] = useState(() => new Date());
@@ -453,13 +458,6 @@ export default function Planning() {
   }, [E, serviceGouv, serviceUrgRea, ateliers]);
 
   const futurs = useMemo(() => mesEvents.filter((ev) => bornes(ev)[1] >= now), [mesEvents, now]);
-  // Les plus récents en premier : c'est un historique qu'on consulte en remontant dans le temps.
-  const passes = useMemo(
-    () => mesEvents
-      .filter((ev) => bornes(ev)[1] < now)
-      .sort((a, b) => (a.d === b.d ? (b.s || "").localeCompare(a.s || "") : b.d.localeCompare(a.d))),
-    [mesEvents, now]
-  );
 
   const groupes = useMemo(() => construireGroupes(mesEvents), [mesEvents]);
   const groupesActifs = useMemo(
@@ -472,19 +470,22 @@ export default function Planning() {
     { id: "semaine", nom: "7 prochains jours" },
     { id: "avenir", nom: "Tout à venir" },
     { id: "examens", nom: "Examens" },
-    { id: "passe", nom: "Événements passés" },
     ...groupesActifs.map((g) => ({ id: g.id, nom: g.nom })),
   ], [groupesActifs]);
 
   const vueOk = onglets.some((o) => o.id === vue) ? vue : "avenir";
+  // Inclut les événements passés dans l'onglet courant, quel qu'il soit, plutôt
+  // que de leur dédier un onglet séparé : chaque matière garde ainsi son
+  // historique accessible depuis son propre onglet.
+  const source = avecPasses ? mesEvents : futurs;
 
   const affiches = useMemo(() => {
-    if (vueOk === "passe") return passes;
-    if (vueOk === "examens") return futurs.filter((ev) => ["examen", "edn"].includes(ev.type));
+    if (vueOk === "examens") return source.filter((ev) => ["examen", "edn"].includes(ev.type));
+    // « 7 prochains jours » garde son sens littéral, peu importe la bascule.
     if (vueOk === "semaine") return futurs.filter((ev) => diff(ev.d, today) <= 7);
     const g = groupes.find((x) => x.id === vueOk);
-    return g ? futurs.filter(g.test) : futurs;
-  }, [futurs, passes, vueOk, today, groupes]);
+    return g ? source.filter(g.test) : source;
+  }, [source, futurs, vueOk, today, groupes]);
 
   const selection = useMemo(() => {
     const vus = new Set();
@@ -624,9 +625,16 @@ export default function Planning() {
           ))}
         </div>
 
+        {vueOk !== "semaine" && (
+          <label className="pl-case-passes">
+            <input type="checkbox" checked={avecPasses} onChange={(e) => setAvecPasses(e.target.checked)} />
+            Afficher aussi les événements passés de cet onglet
+          </label>
+        )}
+
         {affiches.length > 0 && (
           <div className="pl-bar">
-            <span><span className="pl-bar-n">{affiches.length}</span> {affiches.length > 1 ? "événements" : "événement"} {vueOk === "passe" ? "passés" : "à venir"}</span>
+            <span><span className="pl-bar-n">{affiches.length}</span> {affiches.length > 1 ? "événements" : "événement"} {avecPasses && vueOk !== "semaine" ? "au total" : "à venir"}</span>
             <button onClick={() => telecharger(
               affiches,
               `DFASM1 — ${onglets.find((o) => o.id === vueOk)?.nom}`,
