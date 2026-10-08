@@ -1,7 +1,7 @@
 {
   "promo": "DFASM1",
   "annee": "2026-2027",
-  "genere": "2026-10-08T15:44:21.496Z",
+  "genere": "2026-10-08T21:25:17.060Z",
   "nb": 230,
   "events": [
     {
@@ -409,7 +409,7 @@
       "libelle": "Neurologie",
       "type": "conf",
       "site": "ZOOM",
-      "salle": "le lien sera ici",
+      "salle": "https://zoom.us/j/95304497631?pwd=B2KEa7DGJpi1WipiolarVIglaIftEI.1",
       "promo": "DFASM1",
       "id": "2026-10-09-neurologie-17-15",
       "source": "cycle1"
@@ -1176,7 +1176,7 @@
       "libelle": "ortho  1/2",
       "type": "conf",
       "site": "pas d'amphi",
-      "salle": "pas d'amphi",
+      "salle": "Faire en zoom ?",
       "promo": "DFASM1",
       "id": "2026-12-17-ortho-1-2-17-15",
       "source": "cycle1"
