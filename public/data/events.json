@@ -1,7 +1,7 @@
 {
   "promo": "DFASM1",
   "annee": "2026-2027",
-  "genere": "2026-10-19T04:57:46.948Z",
+  "genere": "2026-10-19T10:59:27.986Z",
   "nb": 230,
   "events": [
     {
@@ -557,7 +557,7 @@
       "libelle": "Infections urinaires (sujets dans UNESS)",
       "type": "ed",
       "site": "Hopital Pitié",
-      "salle": "Amphi Charcot",
+      "salle": "Amphi Stomato",
       "promo": "DFASM1",
       "id": "2026-11-03-maladies-infectieuses-14-00",
       "source": "deroule"
@@ -570,7 +570,7 @@
       "libelle": "Infections cutanéomuqueuses (sujets dans UNESS)",
       "type": "ed",
       "site": "Hopital Pitié",
-      "salle": "Amphi Charcot",
+      "salle": "Amphi Stomato",
       "promo": "DFASM1",
       "id": "2026-11-03-maladies-infectieuses-16-15",
       "source": "deroule"
