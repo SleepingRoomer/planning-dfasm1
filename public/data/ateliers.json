@@ -1,5 +1,5 @@
 {
-  "genere": "2026-10-26T07:56:58.316Z",
+  "genere": "2026-10-26T15:19:20.432Z",
   "gouv": {
     "ATLAN": {
       "date": "lundi 19 octobre 2026",
@@ -45,24 +45,24 @@
     },
     "TRAXER": {
       "date": "lundi 19 octobre 2026",
-      "groupe": "GROUPE 1",
-      "accouchement": "14h à 15h",
-      "echo": "15h à 16h",
-      "rds": "16h à 17h"
+      "groupe": "GROUPE 2",
+      "accouchement": "16h à 17h",
+      "echo": "14h à 15h",
+      "rds": "15h à 16h"
     },
     "PARC": {
       "date": "lundi 19 octobre 2026",
-      "groupe": "GROUPE 1",
-      "accouchement": "14h à 15h",
-      "echo": "15h à 16h",
-      "rds": "16h à 17h"
+      "groupe": "GROUPE 2",
+      "accouchement": "16h à 17h",
+      "echo": "14h à 15h",
+      "rds": "15h à 16h"
     },
     "GAUJOUX": {
       "date": "lundi 19 octobre 2026",
-      "groupe": "GROUPE 1",
-      "accouchement": "14h à 15h",
-      "echo": "15h à 16h",
-      "rds": "16h à 17h"
+      "groupe": "GROUPE 2",
+      "accouchement": "16h à 17h",
+      "echo": "14h à 15h",
+      "rds": "15h à 16h"
     },
     "CHARTIER-KASTLER": {
       "date": "lundi 19 octobre 2026",
@@ -73,17 +73,17 @@
     },
     "SCATTON": {
       "date": "lundi 19 octobre 2026",
-      "groupe": "GROUPE 2",
-      "accouchement": "16h à 17h",
-      "echo": "14h à 15h",
-      "rds": "15h à 16h"
+      "groupe": "GROUPE 3",
+      "accouchement": "15h à 16h",
+      "echo": "16h à 17h",
+      "rds": "14h à 15h"
     },
     "BALLESTER": {
       "date": "lundi 19 octobre 2026",
-      "groupe": "GROUPE 2",
-      "accouchement": "16h à 17h",
-      "echo": "14h à 15h",
-      "rds": "15h à 16h"
+      "groupe": "GROUPE 3",
+      "accouchement": "15h à 16h",
+      "echo": "16h à 17h",
+      "rds": "14h à 15h"
     }
   },
   "urgrea": {
