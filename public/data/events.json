@@ -1,7 +1,7 @@
 {
   "promo": "DFASM1",
   "annee": "2026-2027",
-  "genere": "2026-10-26T15:19:19.615Z",
+  "genere": "2026-10-26T20:39:01.674Z",
   "nb": 230,
   "events": [
     {
@@ -499,13 +499,13 @@
       "date": "2026-10-28",
       "debut": "17:15",
       "fin": "19:45",
-      "matiere": "pneumo1",
-      "libelle": "pneumo1",
+      "matiere": "pneumo1 sera mise mardi !",
+      "libelle": "pneumo1 sera mise mardi !",
       "type": "conf",
       "site": "PSL105",
       "salle": "AMPHI F",
       "promo": "DFASM1",
-      "id": "2026-10-28-pneumo1-17-15",
+      "id": "2026-10-28-pneumo1-sera-mise-mardi-17-15",
       "source": "cycle1"
     },
     {
