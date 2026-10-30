@@ -1,7 +1,7 @@
 {
   "promo": "DFASM1",
   "annee": "2026-2027",
-  "genere": "2026-10-29T21:53:32.541Z",
+  "genere": "2026-10-30T02:02:58.450Z",
   "nb": 230,
   "events": [
     {
@@ -512,13 +512,13 @@
       "date": "2026-10-30",
       "debut": "17:15",
       "fin": "19:45",
-      "matiere": "OPH (relancé)",
-      "libelle": "OPH (relancé)",
+      "matiere": "OPH (dans le planif)",
+      "libelle": "OPH (dans le planif)",
       "type": "conf",
       "site": "PSL105",
       "salle": "AMPHI F",
       "promo": "DFASM1",
-      "id": "2026-10-30-oph-relanc-17-15",
+      "id": "2026-10-30-oph-dans-le-planif-17-15",
       "source": "cycle1"
     },
     {
@@ -607,13 +607,13 @@
       "date": "2026-11-04",
       "debut": "17:15",
       "fin": "19:45",
-      "matiere": "Cardiologie2 (en cours)",
-      "libelle": "Cardiologie2 (en cours)",
+      "matiere": "Cardiologie2",
+      "libelle": "Cardiologie2",
       "type": "conf",
       "site": "PSL105",
       "salle": "AMPHI F",
       "promo": "DFASM1",
-      "id": "2026-11-04-cardiologie2-en-cours-17-15",
+      "id": "2026-11-04-cardiologie2-17-15",
       "source": "cycle1"
     },
     {
