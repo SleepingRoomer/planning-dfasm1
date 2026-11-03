@@ -1,8 +1,8 @@
 {
   "promo": "DFASM1",
   "annee": "2026-2027",
-  "genere": "2026-11-03T09:45:21.511Z",
-  "nb": 230,
+  "genere": "2026-11-03T17:56:18.297Z",
+  "nb": 231,
   "events": [
     {
       "date": "2026-09-09",
@@ -703,7 +703,7 @@
       "libelle": "Santé au travail",
       "type": "cm",
       "site": "PSL91",
-      "salle": "Amphi A",
+      "salle": "Amphi C",
       "promo": "DFASM1",
       "id": "2026-11-13-med-legale-travail-14-00",
       "source": "deroule"
@@ -1085,6 +1085,19 @@
       "promo": "DFASM1",
       "pole": "GOUV1",
       "id": "2026-12-07-gyneco-obstetrique-14-00",
+      "source": "deroule"
+    },
+    {
+      "date": "2026-12-08",
+      "debut": "14:00",
+      "fin": "17:00",
+      "matiere": "MED LEGALE TRAVAIL",
+      "libelle": "Santé au travail",
+      "type": "cm",
+      "site": "PSL91",
+      "salle": "Amphi C",
+      "promo": "DFASM1",
+      "id": "2026-12-08-med-legale-travail-14-00",
       "source": "deroule"
     },
     {
