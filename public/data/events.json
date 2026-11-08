@@ -1,7 +1,7 @@
 {
   "promo": "DFASM1",
   "annee": "2026-2027",
-  "genere": "2026-11-08T06:23:09.829Z",
+  "genere": "2026-11-08T13:45:29.663Z",
   "nb": 231,
   "events": [
     {
@@ -512,13 +512,13 @@
       "date": "2026-10-30",
       "debut": "17:15",
       "fin": "19:45",
-      "matiere": "OPH (dans le planif)",
-      "libelle": "OPH (dans le planif)",
+      "matiere": "OPH",
+      "libelle": "OPH",
       "type": "conf",
       "site": "PSL105",
       "salle": "AMPHI F",
       "promo": "DFASM1",
-      "id": "2026-10-30-oph-dans-le-planif-17-15",
+      "id": "2026-10-30-oph-17-15",
       "source": "cycle1"
     },
     {
@@ -821,13 +821,13 @@
       "date": "2026-11-18",
       "debut": "17:15",
       "fin": "19:45",
-      "matiere": "Radiologie2 en cours",
-      "libelle": "Radiologie2 en cours",
+      "matiere": "Radiologie2",
+      "libelle": "Radiologie2",
       "type": "conf",
       "site": "PSL105",
       "salle": "AMPHI F",
       "promo": "DFASM1",
-      "id": "2026-11-18-radiologie2-en-cours-17-15",
+      "id": "2026-11-18-radiologie2-17-15",
       "source": "cycle1"
     },
     {
