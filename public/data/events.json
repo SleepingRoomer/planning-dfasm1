@@ -1,7 +1,7 @@
 {
   "promo": "DFASM1",
   "annee": "2026-2027",
-  "genere": "2026-11-09T22:33:56.970Z",
+  "genere": "2026-11-10T04:41:30.775Z",
   "nb": 231,
   "events": [
     {
@@ -712,13 +712,13 @@
       "date": "2026-11-13",
       "debut": "17:15",
       "fin": "19:45",
-      "matiere": "urologie",
-      "libelle": "urologie",
+      "matiere": "urologie (erreur date dans le titre sujet)",
+      "libelle": "urologie (erreur date dans le titre sujet)",
       "type": "conf",
       "site": "PSL105",
       "salle": "AMPHI F",
       "promo": "DFASM1",
-      "id": "2026-11-13-urologie-17-15",
+      "id": "2026-11-13-urologie-erreur-date-dans-le-titre-sujet-17-15",
       "source": "cycle1"
     },
     {
