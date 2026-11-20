@@ -1,7 +1,7 @@
 {
   "promo": "DFASM1",
   "annee": "2026-2027",
-  "genere": "2026-11-20T11:57:06.181Z",
+  "genere": "2026-11-20T20:35:10.520Z",
   "nb": 231,
   "events": [
     {
@@ -942,13 +942,13 @@
       "date": "2026-11-25",
       "debut": "18:30",
       "fin": "19:45",
-      "matiere": "bactério",
-      "libelle": "bactério",
+      "matiere": "bactério en attente",
+      "libelle": "bactério en attente",
       "type": "conf",
       "site": "PSL105",
       "salle": "AMPHI F",
       "promo": "DFASM1",
-      "id": "2026-11-25-bact-rio-18-30",
+      "id": "2026-11-25-bact-rio-en-attente-18-30",
       "source": "cycle1"
     },
     {
