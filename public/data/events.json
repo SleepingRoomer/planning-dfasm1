@@ -1,7 +1,7 @@
 {
   "promo": "DFASM1",
   "annee": "2026-2027",
-  "genere": "2026-11-22T16:28:57.169Z",
+  "genere": "2026-11-22T22:37:19.733Z",
   "nb": 231,
   "events": [
     {
@@ -942,26 +942,26 @@
       "date": "2026-11-25",
       "debut": "18:30",
       "fin": "19:45",
-      "matiere": "bactério en attente",
-      "libelle": "bactério en attente",
+      "matiere": "bactério en attente de publi",
+      "libelle": "bactério en attente de publi",
       "type": "conf",
       "site": "PSL105",
       "salle": "AMPHI F",
       "promo": "DFASM1",
-      "id": "2026-11-25-bact-rio-en-attente-18-30",
+      "id": "2026-11-25-bact-rio-en-attente-de-publi-18-30",
       "source": "cycle1"
     },
     {
       "date": "2026-11-27",
       "debut": "17:15",
       "fin": "19:45",
-      "matiere": "HGE2",
-      "libelle": "HGE2",
+      "matiere": "HGE2 en attente de publi",
+      "libelle": "HGE2 en attente de publi",
       "type": "conf",
       "site": "PSL105",
       "salle": "AMPHI F",
       "promo": "DFASM1",
-      "id": "2026-11-27-hge2-17-15",
+      "id": "2026-11-27-hge2-en-attente-de-publi-17-15",
       "source": "cycle1"
     },
     {
