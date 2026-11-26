@@ -1,7 +1,7 @@
 {
   "promo": "DFASM1",
   "annee": "2026-2027",
-  "genere": "2026-11-25T19:28:30.483Z",
+  "genere": "2026-11-26T02:56:29.077Z",
   "nb": 231,
   "events": [
     {
@@ -1394,14 +1394,15 @@
       "source": "deroule"
     },
     {
-      "date": "2027-01-15",
+      "date": "2027-01-14",
+      "debut": "17:30",
       "matiere": "ORTHOPEDIE",
       "libelle": "Correction",
       "type": "cours",
       "site": "zoom",
       "promo": "DFASM1",
       "pole": "URRO1",
-      "id": "2027-01-15-orthopedie-jj",
+      "id": "2027-01-14-orthopedie-17-30",
       "source": "deroule"
     },
     {
